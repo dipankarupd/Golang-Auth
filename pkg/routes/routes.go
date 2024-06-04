@@ -17,6 +17,7 @@ func UserRoutes(r *gin.Engine) {
 
 	// add middleware to all the routes:
 	r.Use(middlewares.Authenticate())
+
 	r.GET("/users", controllers.GetUsers())
 	r.GET("/user/{id}", controllers.GetUser())
 }
